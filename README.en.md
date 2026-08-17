@@ -1,5 +1,5 @@
 <p align="right">
-  <a href="./README.md">简体中文</a> · <strong>English</strong>
+  <a href="./README.md">简体中文</a> · <strong>English</strong> · <a href="./USAGE.en.md">User Guide</a>
 </p>
 
 # Project Lens
@@ -7,6 +7,8 @@
 ### Keep track of what an AI-edited project is doing, why it is changing, and where it should go next.
 
 Project Lens is a local-first macOS workspace built especially for vibe coding. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. Even when AI performs most of the implementation and you do not know every line of code, you can still see the direction, recent changes, and the document that explains the next step.
+
+> New to Project Lens? Start with the [Project Lens User Guide](./USAGE.en.md) for the interface, task syntax, and recommended project documents.
 
 ## Problems it solves
 
