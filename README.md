@@ -2,6 +2,10 @@
   <strong>简体中文</strong> · <a href="./README.en.md">English</a> · <a href="./USAGE.md">使用教程</a>
 </p>
 
+<p align="center">
+  <a href="#它解决什么问题">说明</a> · <a href="#五个核心能力">功能</a> · <a href="./USAGE.md">教程</a> · <a href="#下载">下载</a> · <a href="https://github.com/lenuis/project-lens/issues">问答</a>
+</p>
+
 # Project Lens
 
 ### 让人持续看清 AI 项目正在做什么、为什么这样做、下一步去哪里。

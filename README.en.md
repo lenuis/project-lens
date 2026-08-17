@@ -2,6 +2,10 @@
   <a href="./README.md">简体中文</a> · <strong>English</strong> · <a href="./USAGE.en.md">User Guide</a>
 </p>
 
+<p align="center">
+  <a href="#problems-it-solves">Overview</a> · <a href="#five-core-capabilities">Features</a> · <a href="./USAGE.en.md">Guide</a> · <a href="#download">Download</a> · <a href="https://github.com/lenuis/project-lens/issues">Q&amp;A</a>
+</p>
+
 # Project Lens
 
 ### Keep track of what an AI-edited project is doing, why it is changing, and where it should go next.
