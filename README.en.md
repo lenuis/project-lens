@@ -8,6 +8,21 @@
 
 Project Lens is a local-first macOS workspace. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. You do not need to understand every line of code to see the current direction, recent changes, and the document that explains the next step.
 
+## Problems it solves
+
+- **AI changes code faster than people can review it.** Direction, current work, and rationale disappear inside long conversations, making the next session hard to resume.
+- **A project has many documents, but no obvious next place to read.** Project Lens connects requirements, design, technical, test, and release Markdown through one overview and opens the exact source from a task.
+- **Later AI edits can damage an accepted feature.** Confirmed features and designs become protected baselines; another change must disclose its scope, affected files, and risks first.
+- **A code diff does not explain which product behavior changed.** The current round, persistent history, and `CHANGELOG.md` separately show active work, accepted work, and user-facing release changes.
+- **Project-secret use is hard to audit.** AI tools request only a key name, purpose, and exact destination; Project Lens writes the value into the current project only after user approval.
+
+## Who it is for
+
+- Developers who use AI coding tools but do not want project direction to disappear inside a long chat.
+- Product owners and independent makers who need to judge whether a feature is actually complete without reading every line of code.
+- People who use multiple AI tools and want them to maintain one shared set of project facts and documents.
+- Teams that prefer local Markdown, Git, and real files over project state locked inside a cloud service.
+
 ![Project Lens live overview generated from the English sample project](assets/project-lens-demo-overview-en.png)
 
 ## Five core capabilities
@@ -105,13 +120,6 @@ Project overview (generated live; not a real file)
 ```
 
 Project Lens does not create an `overview.html` that must be maintained. The overview is a live reading surface generated from the project's real files.
-
-## Who it is for
-
-- Developers who use AI coding tools but do not want project direction to disappear inside a long chat.
-- Product owners and independent makers who need to judge whether a feature is actually complete without reading every line of code.
-- People who use multiple AI tools and want them to maintain one shared set of project rules and documents.
-- Teams that prefer local Markdown, Git, and real files over project state locked inside a cloud service.
 
 ## Download
 
