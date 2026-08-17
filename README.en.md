@@ -6,7 +6,7 @@
 
 ### Keep track of what an AI-edited project is doing, why it is changing, and where it should go next.
 
-Project Lens is a local-first macOS workspace. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. You do not need to understand every line of code to see the current direction, recent changes, and the document that explains the next step.
+Project Lens is a local-first macOS workspace built especially for vibe coding. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. Even when AI performs most of the implementation and you do not know every line of code, you can still see the direction, recent changes, and the document that explains the next step.
 
 ## Problems it solves
 
@@ -18,6 +18,7 @@ Project Lens is a local-first macOS workspace. It reads the real Markdown files 
 
 ## Who it is for
 
+- Vibe coders turning ideas into products while keeping their attention on direction, features, and outcomes.
 - Developers who use AI coding tools but do not want project direction to disappear inside a long chat.
 - Product owners and independent makers who need to judge whether a feature is actually complete without reading every line of code.
 - People who use multiple AI tools and want them to maintain one shared set of project facts and documents.
