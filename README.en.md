@@ -83,6 +83,10 @@ After the user approves, Project Lens validates the unchanged request and writes
 
 This workflow is intended for local development configuration and does not replace the system keychain or a deployment platform's secret manager.
 
+## Support the author
+
+Support options will be published here. The in-app entry opens this section directly; Project Lens does not process payments inside the app.
+
 ## Complete sample projects
 
 - [中文示例项目](examples/zh-CN)
