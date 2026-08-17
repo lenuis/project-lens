@@ -77,6 +77,8 @@ This is not a permanent file lock. Necessary changes remain possible, while acci
 
 `PROJECT_KEYS.md` is a local sensitive file maintained by the user and read only by Project Lens. AI tools never read the stored secret values. When a tool needs a key, it can submit a value-free request containing the key name, purpose, exact target file, and environment-field name.
 
+![Review the purpose and exact write destination before approving a key request](assets/project-lens-key-approval-en.png)
+
 After the user approves, Project Lens validates the unchanged request and writes the secret only to that exact approved destination. It rejects Git-tracked targets, paths outside the project, symbolic links, and unsupported destinations. Secret values are kept out of chats, summaries, activity reports, code comments, and commits. A different purpose, file, or field requires a new approval.
 
 This workflow is intended for local development configuration and does not replace the system keychain or a deployment platform's secret manager.
