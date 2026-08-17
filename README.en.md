@@ -59,6 +59,8 @@ Project Lens manages the shared rules in `AGENTS.md`. Codex, Claude Code, Cursor
 
 After a feature, interaction, or design is confirmed by the user, Project Lens keeps it in history as a protected baseline. An AI tool cannot quietly overwrite it later. The tool must first explain the proposed change, affected files, and risks to existing behavior, then wait for the user to approve that specific request.
 
+![A confirmed feature stored in history with protection enabled](assets/project-lens-feature-protection-en.png)
+
 ```text
 Confirm a feature or design
         ↓
@@ -134,7 +136,7 @@ Project Lens currently uses free ad-hoc signing and is not notarized by Apple. m
 
 - [Report a problem or suggest an improvement](https://github.com/lenuis/project-lens/issues/new?template=feedback.yml)
 - [View all releases](https://github.com/lenuis/project-lens/releases)
-- “Check for updates” opens the latest GitHub release. It does not silently install updates.
+- “Check for updates” downloads the DMG for the current Mac, verifies its SHA-256, and opens the installer. The user replaces the app manually; existing projects, Markdown, and history remain unchanged.
 
 ## Distribution notice
 

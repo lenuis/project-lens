@@ -59,6 +59,8 @@ Project Lens 把代码和文档变化归到对应功能，显示本轮修改、�
 
 当一个功能、交互或设计已经由用户确认，它会进入历史记录并成为受保护基线。以后 AI 若要改动，不能悄悄覆盖：必须先说明要改什么、会影响哪些文件，以及可能破坏哪些既有行为，再由用户批准这一次修改。
 
+![已确认功能进入历史记录并保持保护状态](assets/project-lens-feature-protection.png)
+
 ```text
 确认功能或设计
         ↓
@@ -134,7 +136,7 @@ Project Lens 目前采用免费的 ad-hoc 签名方案，没有 Apple 公证。�
 
 - [提交使用问题或功能建议](https://github.com/lenuis/project-lens/issues/new?template=feedback.yml)
 - [查看全部版本](https://github.com/lenuis/project-lens/releases)
-- 应用内“检查更新”会打开 GitHub 最新版本页，不会静默安装。
+- 应用内“检查更新”会下载当前 Mac 对应的 DMG、核对 SHA-256 并打开安装镜像；用户确认后手动替换应用，不会修改已有项目、Markdown 或历史记录。
 
 ## 许可说明
 
