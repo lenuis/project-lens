@@ -3,12 +3,16 @@
 </p>
 
 <p align="center">
-  <a href="#problems-it-solves">Overview</a> · <a href="#five-core-capabilities">Features</a> · <a href="./USAGE.en.md">Guide</a> · <a href="#download">Download</a> · <a href="https://github.com/lenuis/project-lens/issues">Q&amp;A</a>
+  <img src="./assets/project-lens-logo.svg" width="112" alt="Project Lens Logo">
 </p>
 
-# Project Lens
+<h1 align="center">Project Lens</h1>
 
-### Keep track of what an AI-edited project is doing, why it is changing, and where it should go next.
+<p align="center"><strong>Keep track of what an AI-edited project is doing, why it is changing, and where it should go next.</strong></p>
+
+<p align="center">
+  <a href="#problems-it-solves">Overview</a> · <a href="#five-core-capabilities">Features</a> · <a href="./USAGE.en.md">Guide</a> · <a href="#download">Download</a> · <a href="https://github.com/lenuis/project-lens/issues">Q&amp;A</a>
+</p>
 
 Project Lens is a local-first macOS workspace built especially for vibe coding. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. Even when AI performs most of the implementation and you do not know every line of code, you can still see the direction, recent changes, and the document that explains the next step.
 

@@ -3,12 +3,16 @@
 </p>
 
 <p align="center">
-  <a href="#它解决什么问题">说明</a> · <a href="#五个核心能力">功能</a> · <a href="./USAGE.md">教程</a> · <a href="#下载">下载</a> · <a href="https://github.com/lenuis/project-lens/issues">问答</a>
+  <img src="./assets/project-lens-logo.svg" width="112" alt="Project Lens Logo">
 </p>
 
-# Project Lens
+<h1 align="center">Project Lens</h1>
 
-### 让人持续看清 AI 项目正在做什么、为什么这样做、下一步去哪里。
+<p align="center"><strong>让人持续看清 AI 项目正在做什么、为什么这样做、下一步去哪里。</strong></p>
+
+<p align="center">
+  <a href="#它解决什么问题">说明</a> · <a href="#五个核心能力">功能</a> · <a href="./USAGE.md">教程</a> · <a href="#下载">下载</a> · <a href="https://github.com/lenuis/project-lens/issues">问答</a>
+</p>
 
 Project Lens 是一个特别适合 Vibe Coding 人群的本地优先 macOS 项目工作台。它读取项目中真实的 Markdown 文件，把功能、阶段、任务、文档和 AI 工具活动整理成动态总览。即使主要依靠 AI 推进实现、不熟悉全部代码，也能知道项目当前做到哪里、最近改了什么，以及需要查看哪份说明。
 
