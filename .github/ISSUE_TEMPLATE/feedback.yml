@@ -1,0 +1,38 @@
+name: Project Lens feedback
+description: Report a problem or suggest an improvement / 报告问题或提出建议
+title: "[Feedback] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Feedback type / 反馈类型
+      options:
+        - Problem / 使用问题
+        - Feature request / 功能建议
+        - Documentation / 文档问题
+        - Other / 其他
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Project Lens version / 版本
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened or what would help? / 发生了什么，或希望怎样改进？
+      description: Do not include project keys, tokens, private source code, or other secrets. / 请勿提交项目密钥、令牌、私有源代码或其他敏感信息。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction or context / 复现步骤或背景
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 使用环境
+      placeholder: macOS version, Mac model, AI tool or IDE
