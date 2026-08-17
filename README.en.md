@@ -8,9 +8,9 @@
 
 Project Lens is a local-first macOS workspace. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. You do not need to understand every line of code to see the current direction, recent changes, and the document that explains the next step.
 
-![Project Lens live overview generated from the sample project](assets/project-lens-demo-overview.png)
+![Project Lens live overview generated from the English sample project](assets/project-lens-demo-overview-en.png)
 
-## Three core capabilities
+## Five core capabilities
 
 ### 1. Jump from the overview to the exact source document
 
@@ -24,7 +24,7 @@ Open docs/requirements.md
 Locate “Booking form” and its acceptance criteria
 ```
 
-![Opening and locating linked Markdown from an overview task](assets/project-lens-linked-document.png)
+![Opening and locating linked English Markdown from an overview task](assets/project-lens-linked-document-en.png)
 
 People see the direction first and open details only when needed. AI tools can follow the same links to the document they are expected to maintain.
 
@@ -54,6 +54,30 @@ Create only the project documents you need from Settings. Each generated documen
 | `docs/architecture.md` | System boundaries, dependencies, and the technical direction |
 
 Project Lens manages the shared rules in `AGENTS.md`. Codex, Claude Code, Cursor, VS Code/Copilot, Windsurf, JetBrains, Zed, and other tools can follow the same project facts. Tool-specific rule files remain thin entry points and do not duplicate task state.
+
+### 4. Protect confirmed features and designs
+
+After a feature, interaction, or design is confirmed by the user, Project Lens keeps it in history as a protected baseline. An AI tool cannot quietly overwrite it later. The tool must first explain the proposed change, affected files, and risks to existing behavior, then wait for the user to approve that specific request.
+
+```text
+Confirm a feature or design
+        ↓
+Keep it as a protected historical baseline
+        ↓ AI proposes another change
+Show scope, affected files, and risks
+        ↓ user approves this request
+Allow only that explicit change
+```
+
+This is not a permanent file lock. Necessary changes remain possible, while accidental regressions to accepted work become visible. One approval does not remove protection; a later change requires a new explanation and approval.
+
+### 5. Approve project-secret use by purpose
+
+`PROJECT_KEYS.md` is a local sensitive file maintained by the user and read only by Project Lens. AI tools never read the stored secret values. When a tool needs a key, it can submit a value-free request containing the key name, purpose, exact target file, and environment-field name.
+
+After the user approves, Project Lens validates the unchanged request and writes the secret only to that exact approved destination. It rejects Git-tracked targets, paths outside the project, symbolic links, and unsupported destinations. Secret values are kept out of chats, summaries, activity reports, code comments, and commits. A different purpose, file, or field requires a new approval.
+
+This workflow is intended for local development configuration and does not replace the system keychain or a deployment platform's secret manager.
 
 ## Complete sample projects
 
