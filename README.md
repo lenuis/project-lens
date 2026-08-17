@@ -4,8 +4,6 @@
 
 Project Lens 是一个本地优先的 macOS 项目工作台。它读取你项目中的真实 Markdown 文件，把功能、阶段、任务、相关文档和 AI 工具活动整理成动态总览；不会把项目内容复制到云端。
 
-> 免费使用 · 闭源软件 · 当前为 macOS 预览版
-
 ![Project Lens 动态总览、Markdown 阅读区与本轮修改记录](assets/project-lens-overview.png)
 
 ## 下载
