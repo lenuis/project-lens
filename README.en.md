@@ -1,0 +1,117 @@
+<p align="right">
+  <a href="./README.md">简体中文</a> · <strong>English</strong>
+</p>
+
+# Project Lens
+
+### Keep track of what an AI-edited project is doing, why it is changing, and where it should go next.
+
+Project Lens is a local-first macOS workspace. It reads the real Markdown files in a project and turns product features, phases, tasks, documentation, and AI-tool activity into a live overview. You do not need to understand every line of code to see the current direction, recent changes, and the document that explains the next step.
+
+![Project Lens live overview generated from the sample project](assets/project-lens-demo-overview.png)
+
+## Three core capabilities
+
+### 1. Jump from the overview to the exact source document
+
+The overview stays focused on product features, project phases, and primary tasks. Click a task and Project Lens opens its linked Markdown document at the relevant heading or the next unfinished checklist item.
+
+```text
+“Confirm booking fields and error messages” in the overview
+        ↓ click
+Open docs/requirements.md
+        ↓
+Locate “Booking form” and its acceptance criteria
+```
+
+![Opening and locating linked Markdown from an overview task](assets/project-lens-linked-document.png)
+
+People see the direction first and open details only when needed. AI tools can follow the same links to the document they are expected to maintain.
+
+### 2. Understand the current round and version history
+
+Project Lens associates changed files with product work and shows the current round, persistent history, and user confirmation state. Git remains the source of real commits, while `CHANGELOG.md` explains what each release changed for users.
+
+| What you see | What it answers |
+| --- | --- |
+| Current round | Which feature did the AI work on, and which files changed? |
+| History | Which features were confirmed, and what changed previously? |
+| Release record | What was added, fixed, or adjusted in each release? |
+| Feature protection | Was the risk approved before changing a confirmed feature? |
+
+### 3. Create project documents that keep AI tools aligned
+
+Create only the project documents you need from Settings. Each generated document begins with a clear purpose note for both people and AI tools.
+
+| Document | Purpose |
+| --- | --- |
+| `PROJECT.md` | The source of project direction, phases, tasks, and the current step |
+| `CHANGELOG.md` | User-facing additions and changes for each release |
+| `docs/decisions.md` | Important product and technical decisions with their rationale |
+| `docs/testing.md` | Test scope, validation results, and remaining risks |
+| `docs/frontend.md` / `backend.md` | Frontend and backend structure, constraints, and implementation checklists |
+| `docs/api.md` / `data.md` | API contracts, data fields, and migration conventions |
+| `docs/architecture.md` | System boundaries, dependencies, and the technical direction |
+
+Project Lens manages the shared rules in `AGENTS.md`. Codex, Claude Code, Cursor, VS Code/Copilot, Windsurf, JetBrains, Zed, and other tools can follow the same project facts. Tool-specific rule files remain thin entry points and do not duplicate task state.
+
+## Complete sample projects
+
+- [中文示例项目](examples/zh-CN)
+- [English sample project](examples/en)
+
+Both examples contain project facts, requirements, design, frontend, backend, API, architecture, test, decision, release, and changelog files. Every document starts with a purpose note.
+
+## What a project looks like in Project Lens
+
+```text
+Project overview (generated live; not a real file)
+├─ PROJECT.md: direction, phases, and tasks
+├─ Real requirements, design, technical, test, and release Markdown
+├─ Tool activity and rule-sync status
+└─ Current changes, user confirmations, and version history
+```
+
+Project Lens does not create an `overview.html` that must be maintained. The overview is a live reading surface generated from the project's real files.
+
+## Who it is for
+
+- Developers who use AI coding tools but do not want project direction to disappear inside a long chat.
+- Product owners and independent makers who need to judge whether a feature is actually complete without reading every line of code.
+- People who use multiple AI tools and want them to maintain one shared set of project rules and documents.
+- Teams that prefer local Markdown, Git, and real files over project state locked inside a cloud service.
+
+## Download
+
+Open the [latest release](https://github.com/lenuis/project-lens/releases/latest) and download the build for your Mac:
+
+- Apple Silicon (M1 / M2 / M3 / M4): `macOS-arm64.dmg`
+- Intel Mac: `macOS-x64.dmg`
+- `SHA256SUMS.txt`: verifies the integrity of the downloaded installer
+
+Project Lens currently uses free ad-hoc signing and is not notarized by Apple. macOS will show a warning on first launch. Open System Settings → Privacy & Security and choose **Open Anyway**. You do not need to disable system security.
+
+## Get started
+
+1. Download Project Lens and drag it to Applications.
+2. Allow macOS to open it on first launch.
+3. Select a real project folder.
+4. If `PROJECT.md` is missing, Project Lens creates a minimal structure without overwriting existing content.
+5. Read the direction in the live overview and click a task to open its Markdown details.
+
+## Local-first privacy
+
+- Project files are read and written locally by default.
+- Project Lens does not require project content to be uploaded or a cloud account to be created.
+- Never commit API keys, tokens, or passwords to Git. Use purpose-bound project authorization and local secret storage.
+- Do not include private source code, project secrets, or other sensitive information in feedback reports.
+
+## Feedback and updates
+
+- [Report a problem or suggest an improvement](https://github.com/lenuis/project-lens/issues/new?template=feedback.yml)
+- [View all releases](https://github.com/lenuis/project-lens/releases)
+- “Check for updates” opens the latest GitHub release. It does not silently install updates.
+
+## Distribution notice
+
+Project Lens can be downloaded and used free of charge, but its source code is not public. The software and distributed files remain protected. See [COPYRIGHT.md](COPYRIGHT.md).
