@@ -132,10 +132,25 @@ Open the [latest release](https://github.com/lenuis/project-lens/releases/latest
 
 Project Lens currently uses free ad-hoc signing and is not notarized by Apple. macOS will show a warning on first launch. Open System Settings → Privacy & Security and choose **Open Anyway**. You do not need to disable system security.
 
+### If macOS blocks the first launch
+
+After dragging Project Lens into Applications, the first double-click may show that Project Lens cannot be opened or that Apple cannot verify it is free of malware. This is the expected first-launch warning for the unnotarized preview; it does not require disabling macOS security.
+
+1. Double-click Project Lens once in Applications to trigger the alert, then close it.
+2. Open System Settings and select Privacy & Security.
+3. Scroll to Security and choose **Open Anyway** beside the Project Lens notice.
+4. Choose **Open** in the final confirmation. Later launches should open normally.
+
+![Where to allow Project Lens after macOS blocks its first launch](assets/project-lens-open-anyway-en.png)
+
+If **Open Anyway** is missing, return to Applications and try to launch Project Lens once before reopening Privacy & Security. Do not disable Gatekeeper or run Terminal commands.
+
+If macOS says the installer is damaged and cannot be opened, do not bypass the warning. Download the DMG for the correct Mac architecture again and verify it against `SHA256SUMS.txt`.
+
 ## Get started
 
 1. Download Project Lens and drag it to Applications.
-2. Allow macOS to open it on first launch.
+2. Follow the illustrated steps above to allow the first launch.
 3. Select a real project folder.
 4. If `PROJECT.md` is missing, Project Lens creates a minimal structure without overwriting existing content.
 5. Read the direction in the live overview and click a task to open its Markdown details.
