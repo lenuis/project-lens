@@ -11,14 +11,15 @@ This quick guide is written for everyday users and vibe coders. You do not need 
 1. Install and open Project Lens.
 2. Choose “Open Folder” in the upper-right corner and select the real project root.
 3. If `PROJECT.md` is missing, Project Lens prepares a minimal project structure and shared rules without replacing the whole content of existing files.
-4. The project remains in the project switcher so you can continue after restarting the app.
+4. If work is already underway but the document structure differs, Project Lens first shows a read-only overview derived from the real Markdown. Choose the actual AI tool below the overview and run “Recheck and organize.”
+5. The project, chosen tool, and unfinished organization state remain available after restarting the app.
 
 The overview is a live application view, not an `overview.html` file in your project:
 
 - `PROJECT.md` is the main source of truth for features, phases, tasks, and substeps.
 - Requirements, design, technical, and test Markdown provide details that can be opened at an exact location.
 - Git changes, file times, tool connection, and rule-sync status are calculated by the app.
-- A static file is only created by an explicit export; normal use does not require an HTML overview.
+- Project Lens does not create an HTML overview that must be maintained; normal use always derives a live view from the real Markdown.
 
 ![Project Lens live overview](./assets/project-lens-demo-overview-en.png)
 
@@ -83,6 +84,23 @@ Open “Settings → Project Documents.” “Create and enable” means: create
 | `.github/ISSUE_TEMPLATE/*.md` | Issue and feature-request templates | GitHub collaboration |
 | `PROJECT_KEYS.md` | Local values for keys needed by this project | When secrets need purpose-based approval |
 
+### Mark implementation state in non-checklist sections
+
+Feature descriptions, design requirements, technical sections, and steps that are not written as checkboxes can keep a state immediately below an H2, H3, or H4 heading:
+
+```md
+## Booking form design
+<!-- project-lens:status=todo -->
+
+## Login API
+<!-- project-lens:status=active -->
+
+## Data migration plan
+<!-- project-lens:status=done implemented=2026-08-18T10:00:00+08:00 -->
+```
+
+Project Lens displays **Not implemented**, **Implementing**, or **Implemented - local time**. Write the completion time only after real implementation and verification; never invent a time for an old section. Checkbox tasks keep using `[ ] / [~] / [x]` and their own task completion time.
+
 Do not create `GIT_LOG.md`: Git is the real commit history. `CHANGELOG.md` only records what a formal release changes for users.
 
 See the [complete English example project](./examples/en/README.md) for a practical structure.
@@ -109,6 +127,14 @@ Tools should reread both files when work begins and before claiming completion. 
 - **Needs sync**: code keeps changing while project steps or explanations have not been updated.
 
 Tools with hook support receive faster reminders. Other editors and AI tools can still be checked through real file activity.
+
+### Organize a project that is already underway
+
+1. Choose the AI tool you actually use below the overview. Project Lens does not guess from process names.
+2. Select **Recheck and organize**. Project Lens prepares the rules, request, and complete instruction; it never sends a hidden background task.
+3. Copy the instruction into an AI conversation that already has this project open.
+4. The AI rereads existing Markdown, classifies requirement, design, technical, test, and release documents, and aligns the primary direction in `PROJECT.md`.
+5. The handoff collapses after copying. Tool choice, the organization request, and completion state remain isolated per project and survive restarts.
 
 ## 7. Confirm and protect accepted features
 

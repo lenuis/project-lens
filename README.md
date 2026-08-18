@@ -79,7 +79,11 @@ Project Lens 把代码和文档变化归到对应功能，显示本轮修改、�
 | `docs/api.md` / `data.md` | 接口、数据字段和迁移约定 |
 | `docs/architecture.md` | 系统边界、依赖和关键技术路线 |
 
+功能、设计、技术说明和不使用复选框的步骤章节，还可以在标题下记录“未实现 / 实现中 / 已实现 - 时间”。完成时间只在真实实现并验证后写入；复选框任务继续使用自己的任务状态和完成时间。
+
 `AGENTS.md` 由 Project Lens 管理共享规则。Codex、Claude Code、Cursor、VS Code/Copilot、Windsurf、JetBrains、Zed 等工具可以读取同一个项目事实入口；工具专用文件只做薄入口，不复制任务状态。
+
+如果项目已经进行到中途但文档命名或层级不同，Project Lens 会先从真实 Markdown 派生只读总览。用户明确选择实际使用的 AI 工具后，可以复制完整整理指令，让工具分类现有文档并对齐 `PROJECT.md`；工具选择和未完成整理状态会按项目保留。
 
 ### 4. 保护已经确认的功能与设计
 

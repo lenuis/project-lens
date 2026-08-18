@@ -79,7 +79,11 @@ Create only the project documents you need from Settings. Each generated documen
 | `docs/api.md` / `data.md` | API contracts, data fields, and migration conventions |
 | `docs/architecture.md` | System boundaries, dependencies, and the technical direction |
 
+Feature descriptions, design requirements, technical sections, and non-checklist steps can also record **Not implemented / Implementing / Implemented - time** below their headings. The time is written only after real implementation and verification; checkbox tasks keep their own task state and completion time.
+
 Project Lens manages the shared rules in `AGENTS.md`. Codex, Claude Code, Cursor, VS Code/Copilot, Windsurf, JetBrains, Zed, and other tools can follow the same project facts. Tool-specific rule files remain thin entry points and do not duplicate task state.
+
+For an existing project whose document names or hierarchy do not yet match Project Lens, the app first derives a read-only overview from the real Markdown. After the user explicitly selects the AI tool being used, Project Lens provides a complete organization instruction so that tool can classify existing documents and align `PROJECT.md`. Tool choice and unfinished organization state remain isolated per project.
 
 ### 4. Protect confirmed features and designs
 
