@@ -25,9 +25,9 @@ The overview is a live application view, not an `overview.html` file in your pro
 
 ## 2. Understand the workspace
 
-- **Live overview**: project direction, overall progress, current feature, phase, task, and substeps.
+- **Live overview**: four equal columns—Not started, In progress, Pending acceptance, and Completed—show project direction and progress. Open cards with children to enter the next board, then use breadcrumbs to return.
 - **Document list on the left**: the real Markdown files in the project. Selecting one opens it in the document area below.
-- **Markdown area below**: read or edit one document. Selecting a task in the overview opens and highlights its linked content.
+- **Markdown area below**: read or edit one document. A leaf task first shows its source preview; choosing **Open document** opens and highlights the exact linked content. Close the whole dock when it is not needed.
 - **Current round / History on the right**: see which files changed for a feature, then confirm or protect accepted work.
 - **Tool connection at the lower left**: distinguishes file activity from whether code and project documentation are still in sync.
 
@@ -57,7 +57,7 @@ The mapping is simple:
 - Keep only one `[~]` current step in the project.
 - `[[relative/path#heading|Display label]]`: link a task to an exact heading in a real Markdown file.
 
-Selecting a task opens its linked document and location instead of copying all details into the overview.
+Selecting a card with children opens another four-column board. Selecting a leaf task shows a source preview and can open the exact linked Markdown location instead of copying every detail into the overview.
 
 ![Open the exact linked Markdown](./assets/project-lens-linked-document-en.png)
 

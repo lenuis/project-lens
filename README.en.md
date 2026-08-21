@@ -40,7 +40,9 @@ Project Lens is a local-first macOS workspace built especially for vibe coding. 
 
 ### 1. Jump from the overview to the exact source document
 
-The overview stays focused on product features, project phases, and primary tasks. Click a task and Project Lens opens its linked Markdown document at the relevant heading or the next unfinished checklist item.
+The overview arranges work into four equal columns: **Not started, In progress, Pending acceptance, and Completed**. Features, phases, and tasks each become a focused card. A card with children opens a new board, while breadcrumbs preserve the full hierarchy without crowding every level onto one page.
+
+Selecting a leaf task shows its Markdown source immediately. Choose **Open document** to open the real file in the dock and jump to the exact heading or checklist item. The document dock can be closed without changing the project overview.
 
 ```text
 “Confirm booking fields and error messages” in the overview
@@ -52,7 +54,7 @@ Locate “Booking form” and its acceptance criteria
 
 ![Opening and locating linked English Markdown from an overview task](assets/project-lens-linked-document-en.png)
 
-People see the direction first and open details only when needed. AI tools can follow the same links to the document they are expected to maintain.
+People follow the board for direction and open details only when needed. AI tools can follow the same links to the document they are expected to maintain.
 
 ### 2. Understand the current round and version history
 
